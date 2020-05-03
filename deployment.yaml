@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rubens-app
+  labels:
+    app: rubens-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rubens-app
+  template:
+    metadata:
+      labels:
+        app: rubens-app
+    spec:
+      containers:
+      - name: rubens-app
+        image: ruliezz/microk8:latest
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+        - name: regcred
