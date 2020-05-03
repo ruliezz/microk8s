@@ -1,7 +1,7 @@
 # Rubens App
 This is a test app for study purpose to understand MicroK8s 
 
-#Build Docker Image
+# Build Docker Image
 ```
 docker build -t my-php-app .
 ```
